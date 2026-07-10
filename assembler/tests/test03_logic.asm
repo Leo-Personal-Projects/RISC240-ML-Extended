@@ -1,0 +1,7 @@
+LI    R1, $00F0
+LI    R2, $0F0F
+AND   R3, R1, R2
+OR    R4, R1, R2
+XOR   R5, R1, R2
+NOT   R6, R1
+STOP

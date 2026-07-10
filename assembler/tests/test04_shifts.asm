@@ -1,0 +1,6 @@
+LI    R1, 1
+SLLI  R2, R1, 5
+SRLI  R3, R2, 2
+LI    R4, $8000
+SRAI  R5, R4, 1
+STOP

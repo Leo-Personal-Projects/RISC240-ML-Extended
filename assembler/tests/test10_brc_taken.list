@@ -1,0 +1,20 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     3040  LI/ADDI          LI    R1, $FFFF
+0002     FFFF  immediate        
+0004     3080  LI/ADDI                  LI    R2, 1
+0006     0001  immediate        
+0008     00CA  ADD                      ADD   R3, R1, R2
+000A     A800  BRC                      BRC   TAKEN
+000C     0012  branch target    
+000E     3100  LI/ADDI                  LI    R4, 999
+0010     03E7  immediate        
+                              TAKEN:
+0012     3140  LI/ADDI                  LI    R5, 5
+0014     0005  immediate        
+0016     FE00  STOP                     STOP
+
+Symbols
+=======
+TAKEN                    $0012

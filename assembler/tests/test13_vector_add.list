@@ -1,0 +1,8 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     60CA  VADD             VADD  V3, V1, V2
+0002     FE00  STOP             STOP
+
+Symbols
+=======

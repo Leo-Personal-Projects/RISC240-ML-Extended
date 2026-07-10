@@ -1,0 +1,8 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     62CA  VMUL             VMUL  V3, V1, V2
+0002     FE00  STOP             STOP
+
+Symbols
+=======

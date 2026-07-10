@@ -1,0 +1,9 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     6800  VACLR            VACLR
+0002     660A  VDOT             VDOT  V1, V2
+0004     FE00  STOP             STOP
+
+Symbols
+=======

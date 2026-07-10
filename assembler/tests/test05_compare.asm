@@ -1,0 +1,7 @@
+LI    R1, 5
+LI    R2, 9
+SLT   R3, R1, R2
+SLT   R4, R2, R1
+SLTI  R5, R1, 6
+SLTI  R6, R2, 6
+STOP

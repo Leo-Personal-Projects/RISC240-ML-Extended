@@ -1,0 +1,19 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     3040  LI/ADDI          LI    R1, $0100
+0002     0100  immediate        
+0004     6A48  VLD              VLD   V1, R1, 0
+0006     0000  immediate        
+0008     7609  VST              VST   R1, V1, 8
+000A     0008  immediate        
+000C     FE00  STOP             STOP
+                              
+                              .ORG  $0100
+0100     1111  .DW              .DW   $1111
+0102     2222  .DW              .DW   $2222
+0104     3333  .DW              .DW   $3333
+0106     4444  .DW              .DW   $4444
+
+Symbols
+=======

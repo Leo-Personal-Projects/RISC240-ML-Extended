@@ -1,0 +1,2 @@
+VADD  V3, V1, V2
+STOP

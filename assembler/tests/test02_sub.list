@@ -1,0 +1,12 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     3040  LI/ADDI          LI    R1, 50
+0002     0032  immediate        
+0004     3080  LI/ADDI          LI    R2, 18
+0006     0012  immediate        
+0008     10CA  SUB              SUB   R3, R1, R2
+000A     FE00  STOP             STOP
+
+Symbols
+=======

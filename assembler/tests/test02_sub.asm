@@ -1,0 +1,4 @@
+LI    R1, 50
+LI    R2, 18
+SUB   R3, R1, R2
+STOP

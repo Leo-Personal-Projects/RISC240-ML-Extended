@@ -1,0 +1,17 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     3040  LI/ADDI          LI    R1, 1
+0002     0001  immediate        
+0004     F800  BRA                      BRA   DONE
+0006     000C  branch target    
+0008     3040  LI/ADDI                  LI    R1, 999
+000A     03E7  immediate        
+                              DONE:
+000C     3080  LI/ADDI                  LI    R2, 5
+000E     0005  immediate        
+0010     FE00  STOP                     STOP
+
+Symbols
+=======
+DONE                     $000C

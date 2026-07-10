@@ -1,0 +1,3 @@
+VACLR
+VDOT  V1, V2
+STOP

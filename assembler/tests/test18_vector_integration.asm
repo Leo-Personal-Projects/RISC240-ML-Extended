@@ -1,0 +1,19 @@
+LI    R1, $0100
+VLD   V1, R1, 0
+VLD   V2, R1, 8
+VADD  V3, V1, V2
+VRELU V4, V3
+VACLR
+VDOT  V1, V2
+VST   R1, V4, 16
+STOP
+
+.ORG  $0100
+.DW   $0102
+.DW   $0304
+.DW   $0506
+.DW   $0708
+.DW   $0101
+.DW   $0101
+.DW   $0101
+.DW   $0101

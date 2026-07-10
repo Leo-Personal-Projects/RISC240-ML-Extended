@@ -1,0 +1,17 @@
+MLASM v1.1 listing
+Address  Word  Description     Source
+=======  ====  ===============  ========================================
+0000     3040  LI/ADDI          LI    R1, 1
+0002     0001  immediate        
+0004     C288  SLLI             SLLI  R2, R1, 5
+0006     0005  immediate        
+0008     E2D0  SRLI             SRLI  R3, R2, 2
+000A     0002  immediate        
+000C     3100  LI/ADDI          LI    R4, $8000
+000E     8000  immediate        
+0010     F360  SRAI             SRAI  R5, R4, 1
+0012     0001  immediate        
+0014     FE00  STOP             STOP
+
+Symbols
+=======

@@ -25,7 +25,7 @@
 
 
 // Comment this line when simulating, uncomment when synthesizing.
-`define synthesis
+// `define synthesis
 
 `ifndef sv_CONSTANTS
 `define sv_CONSTANTS
