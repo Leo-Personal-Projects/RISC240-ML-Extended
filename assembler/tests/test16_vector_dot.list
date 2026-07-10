@@ -1,9 +1,32 @@
 MLASM v1.1 listing
 Address  Word  Description     Source
 =======  ====  ===============  ========================================
-0000     6800  VACLR            VACLR
-0002     660A  VDOT             VDOT  V1, V2
-0004     FE00  STOP             STOP
+0000     3040  LI/ADDI                  LI    R1, $0100
+0002     0100  immediate        
+                              
+0004     6A48  VLD                      VLD   V1, R1, 0
+0006     0000  immediate        
+0008     6A88  VLD                      VLD   V2, R1, 8
+000A     0008  immediate        
+                              
+000C     6800  VACLR                    VACLR
+000E     660A  VDOT                     VDOT  V1, V2
+                              
+0010     FE00  STOP                     STOP
+                              
+                                      .ORG  $0100
+                              
+                                      ; V1: eight signed bytes equal to 1
+0100     0101  .DW                      .DW   $0101
+0102     0101  .DW                      .DW   $0101
+0104     0101  .DW                      .DW   $0101
+0106     0101  .DW                      .DW   $0101
+                              
+                                      ; V2: eight signed bytes equal to 2
+0108     0202  .DW                      .DW   $0202
+010A     0202  .DW                      .DW   $0202
+010C     0202  .DW                      .DW   $0202
+010E     0202  .DW                      .DW   $0202
 
 Symbols
 =======

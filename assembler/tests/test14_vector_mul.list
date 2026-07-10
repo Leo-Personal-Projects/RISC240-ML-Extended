@@ -1,8 +1,31 @@
 MLASM v1.1 listing
 Address  Word  Description     Source
 =======  ====  ===============  ========================================
-0000     62CA  VMUL             VMUL  V3, V1, V2
-0002     FE00  STOP             STOP
+0000     3040  LI/ADDI                  LI    R1, $0100
+0002     0100  immediate        
+                              
+0004     6A48  VLD                      VLD   V1, R1, 0
+0006     0000  immediate        
+0008     6A88  VLD                      VLD   V2, R1, 8
+000A     0008  immediate        
+                              
+000C     62CA  VMUL                     VMUL  V3, V1, V2
+                              
+000E     FE00  STOP                     STOP
+                              
+                                      .ORG  $0100
+                              
+                                      ; V1 bytes: 01 02 03 04 05 06 07 08
+0100     0201  .DW                      .DW   $0201
+0102     0403  .DW                      .DW   $0403
+0104     0605  .DW                      .DW   $0605
+0106     0807  .DW                      .DW   $0807
+                              
+                                      ; V2 bytes: all 02
+0108     0202  .DW                      .DW   $0202
+010A     0202  .DW                      .DW   $0202
+010C     0202  .DW                      .DW   $0202
+010E     0202  .DW                      .DW   $0202
 
 Symbols
 =======

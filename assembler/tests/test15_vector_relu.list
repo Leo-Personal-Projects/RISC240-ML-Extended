@@ -1,8 +1,24 @@
 MLASM v1.1 listing
 Address  Word  Description     Source
 =======  ====  ===============  ========================================
-0000     6488  VRELU            VRELU V2, V1
-0002     FE00  STOP             STOP
+0000     3040  LI/ADDI                  LI    R1, $0100
+0002     0100  immediate        
+                              
+0004     6A48  VLD                      VLD   V1, R1, 0
+0006     0000  immediate        
+                              
+0008     6488  VRELU                    VRELU V2, V1
+                              
+000A     FE00  STOP                     STOP
+                              
+                                      .ORG  $0100
+                              
+                                      ; V1 = 7F80FF01AA5500FE
+                                      ; Lowest byte is FE because lane 0 is stored at the lowest address.
+0100     00FE  .DW                      .DW   $00FE
+0102     AA55  .DW                      .DW   $AA55
+0104     FF01  .DW                      .DW   $FF01
+0106     7F80  .DW                      .DW   $7F80
 
 Symbols
 =======

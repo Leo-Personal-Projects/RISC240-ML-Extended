@@ -1,2 +1,22 @@
-VMUL  V3, V1, V2
-STOP
+        LI    R1, $0100
+
+        VLD   V1, R1, 0
+        VLD   V2, R1, 8
+
+        VMUL  V3, V1, V2
+
+        STOP
+
+        .ORG  $0100
+
+        ; V1 bytes: 01 02 03 04 05 06 07 08
+        .DW   $0201
+        .DW   $0403
+        .DW   $0605
+        .DW   $0807
+
+        ; V2 bytes: all 02
+        .DW   $0202
+        .DW   $0202
+        .DW   $0202
+        .DW   $0202
