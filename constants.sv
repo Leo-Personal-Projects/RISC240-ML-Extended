@@ -25,7 +25,7 @@
 
 
 // Comment this line when simulating, uncomment when synthesizing.
-//`define synthesis
+`define synthesis
 
 `ifndef sv_CONSTANTS
 `define sv_CONSTANTS
@@ -259,22 +259,22 @@ typedef enum logic [6:0] {
    VLD10  = 7'b100_0110,
    VLD11  = 7'b100_0111,
 
+   
    // Vector store
    VST    = 7'b011_1011,
    VST1   = 7'b011_1100,
    VST2   = 7'b011_1101,
    VST3   = 7'b011_1110,
    VST4   = 7'b011_1111,
-   VST5   = 7'b100_1000,
-   VST6   = 7'b100_1001,
-   VST7   = 7'b100_1010,
-   VST8   = 7'b100_1011,
+   VST5   = 7'b100_1001,
+   VST6   = 7'b100_1010,
+   VST7   = 7'b100_1011,
+   VST8   = 7'b101_0001,
    VST9   = 7'b101_0010,
    VST10  = 7'b101_0011,
-   
 
-   UNDEF  = 7'bxxx_xxxx
-
+   UNDEF  = 7'b000_0001 
+   //UNDEF  = 7'bxxx_xxxx
 } opcode_t;
 
 typedef struct packed
