@@ -15,15 +15,15 @@ It must look like:
 Otherwise RISC240_top will compile its FPGA-board ports and memorySystem will
 select the synthesis memory instead of memory_simulation.
 
-2. Recommended project layout
------------------------------
+## 2. Recommended Project Layout
 
+```text
 RISC240GPU/
 ├── constants.sv
 ├── library.sv
 ├── alu.sv
 ├── regfile.sv
-├── adder.sv                (adder module could be inside accumulator if you want)
+├── adder.sv
 ├── vector_regfile.sv
 ├── ML_alu.sv
 ├── dot_product_unit.sv
@@ -44,7 +44,7 @@ RISC240GPU/
     ├── risc240_tb.sv
     ├── expected_results.json
     └── run_tests.py
-
+```
 3. Copy these generated files
 -----------------------------
 
