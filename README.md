@@ -30,8 +30,6 @@ I updated `controlpath.sv` with the additional states and control signals needed
 
 ### New Hardware Modules
 
-I added several new hardware modules:
-
 - `ML_alu.sv` - performs vector addition, multiplication, ReLU, and pass-through operations
 - `vector_regfile.sv` - 8-entry, 64-bit vector register file
 - `vector_load_unit.sv` - loads four consecutive 16-bit memory words into a vector register
