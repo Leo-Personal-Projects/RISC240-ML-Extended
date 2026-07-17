@@ -41,11 +41,11 @@ I added several new modules:
 
 I wrote a Python assembler (`MLASM.py`) that supports both the original RISC240 instructions and the new vector instructions. It generates memory files for simulation and Vivado.
 
-I also wrote an instruction-level simulator (`MLSIM.py`) so I could test assembly programs without running RTL every time.
+I also wrote an instruction-level simulator (`MLSIM.py`) so I could test assembly programs without running RTL every time. This will also come in handy when I start to create full ASM programs that execute more complex machine learning operations (such as doing a dot product of values stored in vector registers, accumulating the result, and storing it in memory). 
 
 ### Verification
 
-To verify the processor, I wrote 18 assembly test programs covering both the original RISC240 instruction set and the new vector instructions. The verification flow automatically assembles each program, loads it into the RTL simulation, runs the processor in Synopsys VCS until the `STOP` instruction, and compares the final architectural state against the expected results.
+To verify the processor, I wrote 18 assembly test programs covering both the original RISC240 instruction set and the new vector instructions. The verification flow automatically assembles each program, loads it into the RTL simulation, runs the processor in Synopsys VCS until the `STOP` instruction, and compares the final architectural state against the expected results (json). The way we know the current architectural state is by using hierarchal reference (dut.xxx.xxx etc), and comparing this value to the expected results in the json once the 'STOP' instruction is asserted. This is then repeated for all 19 tests (driven by python). 
 
 ## Future Work
 
